@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-8">
+      <button data-test="new-event"
+              class="btn btn-primary pull-right"
+              routerLink="/event">New Event</button>
+    </div>
+  </div>
+
+  <div class="row text-center calendar">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-primary"
+          mwlCalendarPreviousView
+          [view]="view"
+          [(viewDate)]="viewDate">
+          Previous
+        </div>
+        <div
+          class="btn btn-default"
+          mwlCalendarToday
+          [(viewDate)]="viewDate">
+          Today
+        </div>
+        <div
+          class="btn btn-primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate">
+          Next
+        </div>
+      </div>
+    </div><!--col-md-4-->
+
+    <div class="col-md-4">
+      <h3 class="view-date">
+        {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
+      </h3>
+    </div><!--col-md-4-->
+
+    <div class="col-md-4">
+      <div class="btn-group toggle-view">
+        <div
+          class="btn btn-primary"
+          (click)="view = 'month'"
+          [class.active]="view === 'month'">
+          Month
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="view = 'week'"
+          [class.active]="view === 'week'">
+          Week
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="view = 'day'"
+          [class.active]="view === 'day'">
+          Day
+        </div>
+      </div>
+    </div><!--col-md-4-->
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div [ngSwitch]="view">
+        <mwl-calendar-month-view
+          *ngSwitchCase="'month'"
+          [viewDate]="viewDate"
+          [events]="events"
+          (eventClicked)="eventClicked($event.event)">
+        </mwl-calendar-month-view>
+
+        <mwl-calendar-week-view
+        *ngSwitchCase="'week'"
+          [viewDate]="viewDate"
+          [events]="events"
+          (eventClicked)="eventClicked($event.event)">
+        </mwl-calendar-week-view>
+
+        <mwl-calendar-day-view
+          *ngSwitchCase="'day'"
+          [viewDate]="viewDate"
+          [events]="events"
+          (eventClicked)="eventClicked($event.event)">
+        </mwl-calendar-day-view>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger text-center">{{error}}</div>
+  <div *ngIf="noEvents" class="alert alert-info text-center">{{noEvents}}</div>
+</div>

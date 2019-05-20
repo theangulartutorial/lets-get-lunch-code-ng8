@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <form #form="ngForm" (ngSubmit)="login(form.value)">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input placeholder="Username"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    type="text"
+                    [(ngModel)]="user.username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input placeholder="------"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    type="password"
+                    [(ngModel)]="user.password">
+          </div>
+
+          <div class="error alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+
+          <div class="form-group">
+            <button class="btn btn-default" type="submit">Login</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

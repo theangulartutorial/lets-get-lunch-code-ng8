@@ -1,0 +1,12 @@
+<div *ngIf="suggestLocations" class="recommendations-container">
+  <h3>Restaurant Recommendations</h3>
+
+  <ul class="list-group" *ngIf="recommendations">
+    <li class="list-group-item recommendation"
+        *ngFor="let recommendation of recommendations">
+      {{recommendation.restaurant.name}}
+    </li>
+  </ul>
+
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+</div>

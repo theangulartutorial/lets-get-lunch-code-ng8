@@ -1,0 +1,51 @@
+{
+  "results_found": 13791,
+  "results_start": 0,
+  "results_shown": 20,
+  "restaurants": [
+    {
+      "restaurant": {
+        "R": {
+          "res_id": 16921606
+        },
+        "apikey": "c7803226951a33f15b8597c0e12d3184",
+        "id": "16921606",
+        "name": "Joe's Stone Crab",
+        "url": "https://www.zomato.com/miami/...",
+        "location": {
+          "address": "11 Washington Ave, Miami Beach 33139",
+          "locality": "South Beach",
+          "city": "Miami",
+          "city_id": 291,
+          "latitude": "25.7684080000",
+          "longitude": "-80.1353150000",
+          "zipcode": "33139",
+          "country_id": 216,
+          "locality_verbose": "South Beach, Miami"
+        },
+        "switch_to_order_menu": 0,
+        "cuisines": "Seafood",
+        "average_cost_for_two": 100,
+        "price_range": 4,
+        "currency": "$",
+        "offers": [],
+        "thumb": "",
+        "user_rating": {
+          "aggregate_rating": "4.6",
+          "rating_text": "Excellent",
+          "rating_color": "3F7E00",
+          "votes": "2818"
+        },
+        "photos_url": "https://www.zomato.com/miami/...",
+        "menu_url": "https://www.zomato.com/miami/...",
+        "featured_image": "",
+        "has_online_delivery": 0,
+        "is_delivering_now": 0,
+        "deeplink": "zomato://restaurant/16921606",
+        "has_table_booking": 0,
+        "events_url": "https://www.zomato.com/miami/...",
+        "establishment_types": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+.recommendations-container ul {
+  max-height: 300px;
+  overflow-y: scroll;
+}

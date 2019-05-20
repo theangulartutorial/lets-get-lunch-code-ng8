@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Events</div>
+
+        <table class="table" *ngIf="events && events.length">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Event Page</th>
+          </tr>
+          <tr *ngFor="let event of events">
+            <td class="event-title">
+              {{event.title}}
+            </td>
+            <td class="event-description">
+              {{event.description}}
+            </td>
+            <td class="event-link">
+              <a [routerLink]="['/event', event._id]">View</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div *ngIf="events && !events.length"
+           class="no-events alert alert-info">There are no events.</div>
+      <div *ngIf="errorMessage"
+           class="alert alert-danger">{{errorMessage}}</div>
+    </div>
+  </div>
+</div>

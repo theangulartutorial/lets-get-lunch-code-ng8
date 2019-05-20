@@ -1,0 +1,21 @@
+<h3>Event members</h3>
+<div *ngIf="!isCreator" class="event-subscribe">
+  <div class="form-group">
+    <button data-test="subscribe"
+            class="btn btn-primary"
+            type="button"
+            *ngIf="!isMember"
+            (click)="subscribe()">Subscribe</button>
+    <button data-test="unsubscribe"
+            class="btn btn-primary"
+            type="button"
+            *ngIf="isMember"
+            (click)="subscribe()">Unsubscribe</button>
+  </div>
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+</div>
+
+<ul class="member-list list-group">
+  <li class="list-group-item member"
+      *ngFor="let member of members">{{member.username}}</li>
+</ul>
