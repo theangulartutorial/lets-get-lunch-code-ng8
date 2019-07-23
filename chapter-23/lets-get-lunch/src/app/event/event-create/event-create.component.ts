@@ -17,7 +17,7 @@ export class EventCreateComponent implements OnInit {
   location: any;
   error: string;
   success: string;
-  @ViewChild('city') citySearch: ElementRef;
+  @ViewChild('city', {static: false}) citySearch: ElementRef;
 
   constructor(private fb: FormBuilder,
     private gmaps: MapsAPILoader,
