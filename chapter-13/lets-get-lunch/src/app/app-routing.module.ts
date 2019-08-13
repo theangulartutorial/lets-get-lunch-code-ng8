@@ -5,12 +5,12 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
+  { path: 'signup', loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule) },
   {
     path: 'dashboard',
-    loadChildren: './dashboard/dashboard.module#DashboardModule'
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
-  { path: 'login', loadChildren: './login/login.module#LoginModule' }
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) }
 ];
 
 @NgModule({
