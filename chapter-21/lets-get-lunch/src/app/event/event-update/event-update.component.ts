@@ -26,7 +26,7 @@ export class EventUpdateComponent implements OnInit {
   location: any;
   error: string;
   success: string;
-  @ViewChild('city') citySearch: ElementRef;
+  @ViewChild('city', { static: false }) citySearch: ElementRef;
 
   constructor(private activatedRoute: ActivatedRoute,
     private authService: AuthService,
