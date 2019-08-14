@@ -2,7 +2,7 @@
   "name": "lets-get-lunch",
   "version": "0.0.0",
   "engines": {
-    "node": "8.9.0",
+    "node": "10.9.0",
     "npm": "4.1.2"
   },
   "scripts": {
