@@ -23,7 +23,7 @@
     "@angular/router": "^9.0.0-next.2",
     "@auth0/angular-jwt": "^3.0.0",
     "angular-calendar": "^0.25.2",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "ng-pick-datetime": "^7.0.0",
